@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:49:00 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/07 12:57:08 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/07 20:11:09 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_atoi(const char *nptr);
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);
-/* int	ft_isascii(int c); */
+int	ft_isascii(int c);
 /* int	ft_isprint(int c); */
 int	ft_toupper(int c);
 int	ft_tolower(int c);
