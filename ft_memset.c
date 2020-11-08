@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 20:33:28 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/07 23:35:44 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/08 00:09:27 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 /*
 	This function fills the first n bytes of the memory area
-	pointed to by s with the constant byte c
+	pointed to by s with the constant byte c and returns a
+	pointer to the memory area s
 */
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -27,4 +28,6 @@ void	*ft_memset(void *s, int c, size_t n)
 		*(char*)(s + i) = c;
 		i++;
 	}
+
+	return (s);
 }
