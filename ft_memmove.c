@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 00:20:22 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/09 11:23:11 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/09 17:40:40 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int i;
+	size_t i;
 	char temp_array[n];
 
 	i = 0;
