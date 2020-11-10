@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:49:00 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/09 21:05:07 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/10 01:30:43 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
-/* void	*ft_memchr(const void *s, int c, size_t n); */
-/* int		ft_memcmp(const void *s1, const void *s2, size_t n); */
+void	*ft_memchr(const void *s, int c, size_t n);i
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t	ft_strlen(const char *s);
 /* size_t	ft_strlcpy(char *dst, const char *src, size_t size); */
 /* size_t	ft_strlcat(char *dst, const char *src, size_t size); */
