@@ -6,12 +6,11 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 10:29:26 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/13 11:39:44 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/13 12:19:22 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /*
 	This function copy strings, unlike ft_strncpy(), it takes the full size of
@@ -33,6 +32,7 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t src_length;
 
 	i = 0;
+	src_length = ft_strlen(src);
 	while (i < size - 1 && src[i] != '\0')
 	{
 		dst[i] = src[i];
@@ -43,37 +43,5 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = '\0';
 		i++;
 	}
-	src_length = ft_strlen(src);
 	return (src_length);
-}
-
-size_t ft_strlcpy2(char *dst, const char *src, size_t size)
-{
-	size_t src_size;
-
-	if (!dst || !src)
-		return (0);
-	src_size = ft_strlen(src);
-	if (size == 0)
-		return (src_size);
-	while (*src && size-- > 1)
-		*dst++ = *src++;
-	*dst = '\0';
-	return (src_size);
-}
-
-
-int	main(void)
-{
-	char src[] = "Nestor";
-	char dst[] = "";
-	int n;
-
-	printf("Size of destination\t%lu\n", sizeof(dst));
-	printf("%s\n", dst);
-	n = ft_strlcpy(dst, src, 3);
-	printf("%s\n", dst);
-	printf("%i\n", n);
-	printf("Size of destination\t%lu\n", sizeof(dst));
-	return (0);
 }
