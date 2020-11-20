@@ -6,9 +6,12 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:49:00 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/19 22:39:34 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/20 11:31:23 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef __LIBFT_H__
+# define __LIBFT_H__
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -53,3 +56,4 @@ int	ft_tolower(int c);
 /* void	ft_putstr_fd(char *s, int fd); */
 /* void	ft_putendl_fd(char *s, int fd); */
 /* void	ft_putnbr_fd(int n, int fd); */
+#endif
