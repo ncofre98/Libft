@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 16:38:01 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/21 22:09:32 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/21 23:41:47 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (i < n && s1[i] && s1[i] == s2[i])
+	while (i < n - 1 && s1[i] && s1[i] == s2[i])
 		i++;
 	return (s1[i] - s2[i]);
 }

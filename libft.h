@@ -6,9 +6,12 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:49:00 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/21 22:14:20 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/21 22:36:25 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef __LIBFT_H__
+# define __LIBFT_H__
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -27,7 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char    *ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+/* char	*ft_strnstr(const char *s1, const char *s2, size_t n); */
 int     ft_strncmp(const char *s1, const char *s2, size_t n);
 int	ft_atoi(const char *nptr);
 int	ft_isalpha(int c);
@@ -56,3 +59,4 @@ int	ft_tolower(int c);
 
 /* Additional Useful Functions */
 int	ft_strcmp(const char *s1, const char *s2);
+#endif
