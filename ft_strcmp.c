@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 21:18:48 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/20 21:51:37 by ncofre           ###   ########.fr       */
+/*   Created: 2020/11/21 21:24:16 by ncofre            #+#    #+#             */
+/*   Updated: 2020/11/21 22:00:37 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+/*
+	This function compares the two strings s1 and s2.
+	If return value < 0 then it indicates s1 is less than s2.
+	If return value > 0 then it indicates s2 is less than s1.
+	If return value = 0 then it indicates s1 is equal to s2.
+*/
+
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	if (c == '\0')
-		return ((char*)&s[ft_strlen(s)]);
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char*)&s[i]);
+	while (s1[i] && s1[i] == s2[i])
 		i++;
-	}
-	return (NULL);
+	return (s1[i] - s2[i]);
 }

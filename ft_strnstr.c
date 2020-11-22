@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:20:33 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/20 11:39:17 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/21 20:45:45 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,42 @@
 	occurrence of s2 is returned.
 */
 
+char    *ft_strchr(const char *s, int c)
+{
+	int i;
+
+	i = 0;
+	if (c == '\0')
+		return ((char*)&s[ft_strlen(s)]);
+	while (s[i])
+	{
+		if (s[i] == c)
+			return ((char*)&s[i]);
+		i++;
+	}
+
+	return (NULL);
+}
+
+int     ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t i;
+
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (i < n - 1 && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
+}
+
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	char *f_letter;
 	char str[n];
 	size_t i;
 
-	if (!s2)
+	if (!*s2)
 		return ((char*)&(s1[0]));
 	i = 0;
 	while (i < n)
@@ -52,7 +81,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 int	main(void)
 {
 	char s1[] = "El gato blanco Solovino :3";
-	char s2[] = "Solovino";
+	char s2[] = "no";
 
 	printf("%s\n", ft_strnstr(s1, s2, sizeof(s2) - 1));
 	return (0);

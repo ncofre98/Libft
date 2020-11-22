@@ -6,12 +6,9 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:49:00 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/20 11:31:23 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/21 22:14:20 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef __LIBFT_H__
-# define __LIBFT_H__
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -28,10 +25,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
-char	*ft_strchr(const char *s, int c);
+char    *ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-/* char	*ft_strnstr(const char *s1, const char *s2, size_t n); */
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+int     ft_strncmp(const char *s1, const char *s2, size_t n);
 int	ft_atoi(const char *nptr);
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
@@ -56,4 +53,6 @@ int	ft_tolower(int c);
 /* void	ft_putstr_fd(char *s, int fd); */
 /* void	ft_putendl_fd(char *s, int fd); */
 /* void	ft_putnbr_fd(int n, int fd); */
-#endif
+
+/* Additional Useful Functions */
+int	ft_strcmp(const char *s1, const char *s2);
