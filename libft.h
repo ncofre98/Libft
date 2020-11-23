@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:49:00 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/22 00:04:21 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/22 18:37:47 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_toupper(int c);
 int	ft_tolower(int c);
 
 /* Malloc functions */
-/* void	*ft_calloc(size_t nmemb, size_t size); */
+void	*ft_calloc(size_t nmemb, size_t size);
 /* char 	*ft_strdup(const char *s); */
 
 /* Part 2 - Additional functions */
