@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 09:05:00 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/17 09:17:29 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/22 21:47:26 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	size_t i;
 
 	i = ft_strlen(s);
 	if (c == '\0')

@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 20:33:28 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/08 00:09:27 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/22 21:45:27 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (i < n)

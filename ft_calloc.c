@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 17:07:25 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/22 21:36:39 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/22 21:45:00 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	ptr = malloc(total_size);
-	ft_bzero(ptr, total_size - 1);
+	ft_bzero(ptr, total_size);
 	return (ptr);
 }
