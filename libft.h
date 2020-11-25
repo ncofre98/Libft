@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:49:00 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/24 23:46:55 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/25 13:55:34 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char 	*ft_strdup(const char *s);
 /* Part 2 - Additional functions */
 char 	*ft_substr(char const *s, unsigned int start, size_t len);
 char 	*ft_strjoin(char const *s1, char const *s2);
-/* char	*ft_strtrim(char const *s1, char const *set); */
+char	*ft_strtrim(char const *s1, char const *set);
 /* char	**ft_split(char const *s, char c); */
 /* char	*ft_itoa(int n); */
 /* char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)); */
