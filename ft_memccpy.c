@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 17:47:10 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/09 21:04:36 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/25 18:55:11 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 	area dest, stopping when the character c is found.
 
 	If the memory areas overlap, the results are undefined.
+
+	This function returns a pointer to the next character in dest after c, or
+	NULL if c was not found in the first n characters of src.
 */
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
