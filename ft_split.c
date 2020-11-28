@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:09:55 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/26 21:14:59 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/28 14:10:24 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,23 @@ static size_t	ft_substrlen (char const *start, char const *end)
 	}
 }
 
-char	**ft_split(char const *s, char c)
+/*
+	This function returns a pointer to what ft_strchr returns.
+	If ft_strchr gives a NULL then it returns a
+	pointer to the '\0' NULL character.
+*/
+
+static char	*ft_findchar(const char *s, int c)
+{
+	char *ptr;
+
+	ptr = ft_strchr(s, c);
+	if (ptr == NULL)
+		ptr = ft_strchr(s, '\0');
+	return (ptr);
+}
+
+char	**ft_split2(char const *s, char c)
 {
 	unsigned int n_strpointers;
 	unsigned int i;
@@ -61,22 +77,15 @@ char	**ft_split(char const *s, char c)
 	n_strpointers = ft_ncharinstr(s, c) + 2;
 	array = (char**)malloc(sizeof(char*) * n_strpointers);
 	start = (char*)&s[0];
-	end = ft_strchr(start, c) - 1;
+	end = ft_findchar(start, c) - 1;
 	while (i - n_strpointers - 1)
 	{
 		size = ft_substrlen(start, end) + 2;
 		array[i] = (char*)malloc(sizeof(char) * size);
 		ft_strlcpy(array[i], start, size);
-		if (i == n_strpointers - 2)
-		{
-			i++;
-			break;
-		}
-		start = ft_strchr(start, c) + 1;
-		end = ft_strchr(start, c) - 1;
+		start = ft_findchar(start, c) + 1;
+		end = ft_findchar(start, c) - 1;
 		i++;
-		if (i  == n_strpointers - 2)
-			end = ft_strchr(start, '\0') - 1;
 	}
 	array[i] = NULL;
 	return (array);
