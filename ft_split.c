@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:09:55 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/28 14:10:24 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/28 14:15:38 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char	*ft_findchar(const char *s, int c)
 	return (ptr);
 }
 
-char	**ft_split2(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	unsigned int n_strpointers;
 	unsigned int i;
