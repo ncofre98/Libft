@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 14:21:17 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/29 23:42:44 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/29 23:43:28 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_itoa(int n)
 {
 	char *ptr;
 	int size;
-	unsigned int stop;
+	int stop;
 	unsigned int pten;
 
 	pten = 1;
