@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 14:21:17 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/29 23:43:28 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/30 08:57:06 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	ft_countdigits(int n)
 	int i;
 
 	i = 0;
+	if (n < 0)
+		i++;
 	while (n != 0)
 	{
 		n /= 10;
@@ -35,16 +37,15 @@ char	*ft_itoa(int n)
 	pten = 1;
 	size = ft_countdigits(n) + 1;
 	stop = 0;
+	ptr = (char*)malloc(sizeof(char) * size);
+	if (!ptr)
+		return (NULL);
 	if (n < 0)
 	{
-		size++;
-		ptr = (char*)malloc(sizeof(char) * size);
 		*ptr = '-';
 		n *= -1;
 		stop = 1;
 	}
-	else
-		ptr = (char*)malloc(sizeof(char) * size);
 	ptr[--size] = '\0';
 	while (--size >= stop)
 	{
