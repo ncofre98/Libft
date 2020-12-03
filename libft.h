@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:49:00 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/28 14:20:54 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/11/30 09:01:13 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char 	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
-/* char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)); */
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 /* void	ft_putchar_fd(char c, int fd); */
 /* void	ft_putstr_fd(char *s, int fd); */
 /* void	ft_putendl_fd(char *s, int fd); */
