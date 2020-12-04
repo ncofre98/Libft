@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 22:02:17 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/03 22:03:58 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/03 22:15:37 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
-		ft_putchar_fd(*s++, fd);
+	if (s)
+		write(fd, s, ft_strlen(s));
 }
