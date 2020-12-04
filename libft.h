@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:49:00 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/03 22:19:03 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/03 22:34:40 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
-/* void	ft_putnbr_fd(int n, int fd); */
+void	ft_putnbr_fd(int n, int fd);
 
 /* Additional Useful Functions */
 int	ft_strcmp(const char *s1, const char *s2);
