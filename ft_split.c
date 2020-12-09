@@ -6,18 +6,18 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:09:55 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/28 14:15:38 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/08 20:16:49 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-	Allocates with malloc and returns an array of strings obtained by splitting
-	s using the character c as delimiter. The array must be ended by a
-	NULL pointer.
-
-	Returns NULL if the allocation fails.
+**Allocates with malloc and returns an array of strings obtained by splitting
+**s using the character c as delimiter. The array must be ended by a
+**NULL pointer.
+**
+**Returns NULL if the allocation fails.
 */
 
 static size_t	ft_ncharinstr (char const *s, char const c)

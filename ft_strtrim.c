@@ -6,17 +6,17 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 00:16:15 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/25 15:03:49 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/08 20:16:29 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-	Allocates with malloc and returns a copy of s1 with the characters specified
-	in set removed from the beginning and the end of the string.
-
-	Returns NULL if the allocation fails.
+**Allocates with malloc and returns a copy of s1 with the characters specified
+**in set removed from the beginning and the end of the string.
+**
+**Returns NULL if the allocation fails.
 */
 
 static int	ft_inarray(const char c, const char *array)

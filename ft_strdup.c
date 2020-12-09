@@ -6,20 +6,20 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 22:21:39 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/24 22:07:49 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/08 20:12:11 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-	This function returns a pointer to a new string which is a duplicate of the
-	string s. Memory for the new string is obtained with malloc, and can be
-	freed with free.
-
-	On success, this functions returns a pointer to the duplicated string.
-	It returns NULL if insufficient memory was available, with errno set to
-	indicate the cause of the error.
+**This function returns a pointer to a new string which is a duplicate of the
+**string s. Memory for the new string is obtained with malloc, and can be
+**freed with free.
+**
+**On success, this functions returns a pointer to the duplicated string.
+**It returns NULL if insufficient memory was available, with errno set to
+**indicate the cause of the error.
 */
 
 char	*ft_strdup(const char *s)

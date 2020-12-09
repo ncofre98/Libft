@@ -6,12 +6,12 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:49:00 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/03 22:34:40 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/08 19:51:22 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __LIBFT_H__
-# define __LIBFT_H__
+#ifndef LIBFT_H
+# define LIBFT_H
 
 #include <unistd.h>
 #include <stdlib.h>

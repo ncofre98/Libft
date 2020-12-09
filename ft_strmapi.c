@@ -6,18 +6,18 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 09:02:14 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/03 16:35:24 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/08 20:17:30 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-	Applies the function f to each character of the string s passed as argument
-	by giving its index as first argument to create a new string with malloc
-	resulting from successive applications of f.
-
-	Returns NULL if the allocation fails.
+**Applies the function f to each character of the string s passed as argument
+**by giving its index as first argument to create a new string with malloc
+**resulting from successive applications of f.
+**
+**Returns NULL if the allocation fails.
 */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
