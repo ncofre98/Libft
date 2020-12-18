@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 20:22:37 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/10 21:48:12 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/17 21:56:20 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_lstsize(t_list *lst)
 	t_list *tmp;
 
 	i = 0;
-	tmp = lst->next;
+	tmp = lst;
 	while (tmp != NULL)
 	{
 		i++;
