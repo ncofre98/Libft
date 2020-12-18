@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 11:51:12 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/10 14:12:06 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/13 21:45:37 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*ptr;
 
-	ptr = malloc(sizeof(t_list));
+	ptr = (t_list *)malloc(sizeof(t_list));
 	if (!ptr)
 		return (NULL);
 	ptr->content = content;
