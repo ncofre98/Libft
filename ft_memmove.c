@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 00:20:22 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/08 19:56:35 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 09:17:13 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@
 **dest and returns a pointer to dest
 */
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void		*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t i;
-	char temp_array[n];
+	size_t	i;
+	char	temp_array[n];
 
 	i = 0;
-	while(i < n)
+	while (i < n)
 	{
 		temp_array[i] = *(char*)(src + i);
 		i++;

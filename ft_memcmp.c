@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 23:45:43 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/12 15:35:07 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 09:14:57 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,19 @@
 **If n is zero, the return value is zero.
 */
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int				ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int i;
-	unsigned char *m1;
-	unsigned char *m2;
+	unsigned int	i;
+	unsigned char	*m1;
+	unsigned char	*m2;
 
-	m1 = ((unsigned char *) s1);
-	m2 = ((unsigned char *) s2);
+	m1 = ((unsigned char *)s1);
+	m2 = ((unsigned char *)s2);
 	while (i < n && m1[i] == m2[i])
 	{
 		if (m1[i] != m2[i])
 			return (m1[i] - m2[i]);
 		i++;
 	}
-
 	return (m1[i] - m2[i]);
 }

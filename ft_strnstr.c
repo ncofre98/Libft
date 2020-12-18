@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:20:33 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/08 20:10:35 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 08:58:28 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 **occurrence of s2 is returned.
 */
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+char		*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	char *f_letter;
-	char str[n];
-	size_t i;
+	size_t	i;
+	char	*f_letter;
+	char	str[n];
 
 	if (!*s2)
 		return ((char*)&(s1[0]));

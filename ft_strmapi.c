@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 09:02:14 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/08 20:17:30 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 09:03:18 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 **Returns NULL if the allocation fails.
 */
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *new;
-	unsigned int i;
+	char			*new;
+	unsigned int	i;
 
 	new = (char*)malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!new || !s || !f)

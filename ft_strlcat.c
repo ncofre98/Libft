@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 12:21:07 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/08 20:09:41 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 09:15:51 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 
 size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t end_dst;
-	size_t strs_length;
-	
+	size_t	i;
+	size_t	end_dst;
+	size_t	strs_length;
+
 	i = 0;
 	end_dst = ft_strlen(dst);
 	strs_length = ft_strlen(dst) + ft_strlen(src);

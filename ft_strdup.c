@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 22:21:39 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/08 20:12:11 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 09:02:04 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 **indicate the cause of the error.
 */
 
-char	*ft_strdup(const char *s)
+char		*ft_strdup(const char *s)
 {
-	char *ptr;
-	size_t str_size;
+	char	*ptr;
+	size_t	str_size;
 
 	str_size = ft_strlen(s) + 1;
 	ptr = (char*)malloc(str_size);

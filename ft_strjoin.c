@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 23:15:18 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/08 20:15:58 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 09:02:45 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 **Returns NULL if the allocation fails.
 */
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
-	char *ptr;
-	size_t size;
+	char	*ptr;
+	size_t	size;
 
 	size = ft_strlen(s1) + ft_strlen(s2) + 1;
 	ptr = (char*)malloc(sizeof(char) * size);

@@ -6,15 +6,15 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 14:21:17 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/30 08:57:06 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 09:12:04 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_countdigits(int n)
+static int			ft_countdigits(int n)
 {
-	int i;
+	int				i;
 
 	i = 0;
 	if (n < 0)
@@ -27,12 +27,12 @@ static int	ft_countdigits(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
-	char *ptr;
-	int size;
-	int stop;
-	unsigned int pten;
+	char			*ptr;
+	int				size;
+	int				stop;
+	unsigned int	pten;
 
 	pten = 1;
 	size = ft_countdigits(n) + 1;

@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 00:16:15 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/08 20:16:29 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 08:50:42 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 **Returns NULL if the allocation fails.
 */
 
-static int	ft_inarray(const char c, const char *array)
+static int		ft_inarray(const char c, const char *array)
 {
 	while (*array)
 	{
@@ -30,7 +30,7 @@ static int	ft_inarray(const char c, const char *array)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char			*ft_strtrim(char const *s1, char const *set)
 {
 	size_t i;
 	size_t size;

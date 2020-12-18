@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:09:55 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/08 20:16:49 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 10:34:43 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 **Returns NULL if the allocation fails.
 */
 
-static size_t	ft_ncharinstr (char const *s, char const c)
+static size_t		ft_ncharinstr(char const *s, char const c)
 {
 	size_t n;
 
@@ -34,7 +34,7 @@ static size_t	ft_ncharinstr (char const *s, char const c)
 	return (n);
 }
 
-static size_t	ft_substrlen (char const *start, char const *end)
+static size_t		ft_substrlen(char const *start, char const *end)
 {
 	size_t i;
 
@@ -48,13 +48,7 @@ static size_t	ft_substrlen (char const *start, char const *end)
 	}
 }
 
-/*
-	This function returns a pointer to what ft_strchr returns.
-	If ft_strchr gives a NULL then it returns a
-	pointer to the '\0' NULL character.
-*/
-
-static char	*ft_findchar(const char *s, int c)
+static char		*ft_findchar(const char *s, int c)
 {
 	char *ptr;
 
@@ -64,14 +58,13 @@ static char	*ft_findchar(const char *s, int c)
 	return (ptr);
 }
 
-char	**ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
-	unsigned int n_strpointers;
-	unsigned int i;
-	unsigned int size;
-	char **array;
-	char *start;
-	char *end;
+	unsigned int	n_strpointers;
+	unsigned int	i;
+	char			**array;
+	char			*start;
+	char			*end;
 
 	i = 0;
 	n_strpointers = ft_ncharinstr(s, c) + 2;
@@ -80,8 +73,7 @@ char	**ft_split(char const *s, char c)
 	end = ft_findchar(start, c) - 1;
 	while (i - n_strpointers - 1)
 	{
-		size = ft_substrlen(start, end) + 2;
-		array[i] = (char*)malloc(sizeof(char) * size);
+		array[i] = (char*)malloc(sizeof(char) * ft_substrlen(start, end) + 2);
 		ft_strlcpy(array[i], start, size);
 		start = ft_findchar(start, c) + 1;
 		end = ft_findchar(start, c) - 1;
