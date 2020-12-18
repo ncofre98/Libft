@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:09:55 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/18 10:34:43 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 10:57:48 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 **Returns NULL if the allocation fails.
 */
 
-static size_t		ft_ncharinstr(char const *s, char const c)
+static size_t	ft_ncharinstr(char const *s, char const c)
 {
-	size_t n;
+	size_t	n;
 
 	n = 0;
 	while (*s)
@@ -34,9 +34,9 @@ static size_t		ft_ncharinstr(char const *s, char const c)
 	return (n);
 }
 
-static size_t		ft_substrlen(char const *start, char const *end)
+static size_t	ft_substrlen(char const *start, char const *end)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (*start)
@@ -58,13 +58,13 @@ static char		*ft_findchar(const char *s, int c)
 	return (ptr);
 }
 
-char				**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
-	unsigned int	n_strpointers;
-	unsigned int	i;
-	char			**array;
-	char			*start;
-	char			*end;
+	size_t		n_strpointers;
+	size_t		i;
+	char		**array;
+	char		*start;
+	char		*end;
 
 	i = 0;
 	n_strpointers = ft_ncharinstr(s, c) + 2;
