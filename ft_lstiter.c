@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 21:37:28 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/11 21:40:15 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/17 21:46:40 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list *current;
 
-	current = lst->next;
+	current = lst;
 	while (current != NULL)
 	{
 		f(current->content);
