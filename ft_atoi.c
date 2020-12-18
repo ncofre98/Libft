@@ -6,15 +6,15 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 00:01:51 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/22 22:00:44 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 02:19:44 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *nptr)
 {
-	long i;
+	int i;
+	int number;
 	int sign;
-	long number;
 
 	i = 0;
 	sign = 1;
