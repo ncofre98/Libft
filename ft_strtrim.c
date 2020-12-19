@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 00:16:15 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/18 08:50:42 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/18 23:21:25 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ static int		ft_inarray(const char c, const char *array)
 {
 	while (*array)
 	{
-		if (c == *array)
+		if (c == *array++)
 			return (1);
-		*array++;
 	}
 	return (0);
 }
