@@ -6,14 +6,14 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 20:11:38 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/07 20:26:45 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/22 11:25:37 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c > 31 && c < 128)
-		return (c);
+	if (c > 31 && c < 127)
+		return (1);
 	else
 		return (0);
 }
