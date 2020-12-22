@@ -6,13 +6,12 @@
 #    By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/22 10:07:07 by ncofre            #+#    #+#              #
-#    Updated: 2020/12/22 10:51:49 by ncofre           ###   ########.fr        #
+#    Updated: 2020/12/22 10:57:08 by ncofre           ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 CC = gcc
 FLAGS = -Wall -Werror -Wextra -c
-AR = ar rc
 NAME = libft.a
 
 SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c\
