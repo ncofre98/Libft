@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:09:55 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/18 10:57:48 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/22 00:59:51 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,8 @@ static size_t	ft_ncharinstr(char const *s, char const c)
 	n = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s++ == c)
 			n++;
-		*s++;
 	}
 	return (n);
 }
@@ -41,11 +40,11 @@ static size_t	ft_substrlen(char const *start, char const *end)
 	i = 0;
 	while (*start)
 	{
-		if (start == end)
+		if (start++ == end)
 			return (i);
 		i++;
-		*start++;
 	}
+	return (i);
 }
 
 static char		*ft_findchar(const char *s, int c)
@@ -60,25 +59,25 @@ static char		*ft_findchar(const char *s, int c)
 
 char			**ft_split(char const *s, char c)
 {
-	size_t		n_strpointers;
-	size_t		i;
-	char		**array;
-	char		*start;
-	char		*end;
+	char	**arr;
+	char	*start;
+	char	*end;
+	size_t	size;
+	size_t	i;
 
+	size = ft_ncharinstr(s, c) + 2;
+	if (!(arr = (char**)malloc(sizeof(char**) * size)))
+		return (NULL);
+	arr[--size] = NULL;
 	i = 0;
-	n_strpointers = ft_ncharinstr(s, c) + 2;
-	array = (char**)malloc(sizeof(char*) * n_strpointers);
-	start = (char*)&s[0];
-	end = ft_findchar(start, c) - 1;
-	while (i - n_strpointers - 1)
+	start = (char*)s;
+	while (i < size)
 	{
-		array[i] = (char*)malloc(sizeof(char) * ft_substrlen(start, end) + 2);
-		ft_strlcpy(array[i], start, size);
-		start = ft_findchar(start, c) + 1;
-		end = ft_findchar(start, c) - 1;
-		i++;
+		end = ft_findchar(start, c);
+		if (!(arr[i++] = ft_substr(s, ft_substrlen(s, start),
+							ft_substrlen(start, end))))
+			return (NULL);
+		start = end + 1;
 	}
-	array[i] = NULL;
-	return (array);
+	return (arr);
 }
