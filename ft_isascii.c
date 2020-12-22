@@ -6,14 +6,14 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 19:36:30 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/07 20:10:15 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/22 11:17:31 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-		return (c);
+		return (1);
 	else
 		return (0);
 }
