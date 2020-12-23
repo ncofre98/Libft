@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 10:29:26 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/08 20:05:25 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/23 02:59:05 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,15 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t i;
 	size_t src_length;
 
-	i = 0;
 	src_length = ft_strlen(src);
-	while (i < size - 1 && src[i] != '\0')
+	if (size == 0)
+		return (src_length);
+	i = 0;
+	while (i < size - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	while (i < size)
-	{
-		dst[i] = '\0';
-		i++;
-	}
+	dst[i] = '\0';
 	return (src_length);
 }
