@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 14:21:17 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/18 09:12:04 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/24 00:43:55 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int			ft_countdigits(int n)
 	int				i;
 
 	i = 0;
-	if (n < 0)
+	if (n <= 0)
 		i++;
 	while (n != 0)
 	{
