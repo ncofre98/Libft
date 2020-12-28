@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 22:02:48 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/10 22:12:53 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/27 23:40:13 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,11 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	ft_lstlast(*lst)->next = new;
+	if (!*lst)
+		ft_lstadd_front(lst, new);
+	else
+	{
+		ft_lstlast(*lst)->next = new;
+		new->next = NULL;
+	}
 }
