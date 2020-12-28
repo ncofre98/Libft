@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 00:16:15 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/27 22:25:24 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/27 23:04:20 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ static int		ft_inarray(const char c, const char *array)
 
 char			*ft_strtrim(char const *s1, char const *set)
 {
-	int i;
-	int start;
-	int end;
-	size_t size;
+	int		i;
+	int		start;
+	int		end;
+	size_t	size;
 
 	i = 0;
 	size = 0;
@@ -46,7 +46,7 @@ char			*ft_strtrim(char const *s1, char const *set)
 		i--;
 	end = i;
 	if (end < start)
-		return (ft_substr("", 0, 1));
+		return (ft_substr("", 0, 0));
 	size = end - start + 1;
 	return (ft_substr(s1, start, size));
 }
