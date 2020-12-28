@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 22:02:32 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/18 01:41:26 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/28 09:58:07 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,21 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *list;
 	t_list *new;
-	t_list *current;
+	t_list *tmp;
 
-	if (f)
-		ft_lstiter(lst, (void *)f);
-	if (!(new = ft_lstnew(lst->content)))
+	if (!lst || !(tmp = ft_lstnew(f(lst->content))))
 		return (NULL);
-	current = new;
-	list = lst;
-	while (list->next != NULL)
+	new = tmp;
+	while (lst->next != NULL)
 	{
-		list = list->next;
-		current->next = ft_lstnew(list->content);
-		current = current->next;
+		lst = lst->next;
+		if (!(tmp = ft_lstnew(f(lst->content))))
+			return (NULL);
+		ft_lstadd_back(&new, tmp);
+		tmp = tmp->next;
+		if (tmp)
+			ft_lstdelone(tmp, del);
 	}
-	if (del)
-		ft_lstclear(&lst, del);
 	return (new);
 }
