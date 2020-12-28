@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:09:55 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/22 00:59:51 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/28 15:42:18 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,22 @@
 **Returns NULL if the allocation fails.
 */
 
-static size_t	ft_ncharinstr(char const *s, char const c)
+static size_t	ft_nsentences(char const *s, char const c)
 {
-	size_t	n;
+	size_t count;
+	size_t n;
 
+	count = 0;
 	n = 0;
 	while (*s)
 	{
-		if (*s++ == c)
+		if (*s != c)
+			count++;
+		if ((*s++ == c && count > 0) || (!*(s + 1) && count > 0))
+		{
 			n++;
+			count = 0;
+		}
 	}
 	return (n);
 }
@@ -38,7 +45,7 @@ static size_t	ft_substrlen(char const *start, char const *end)
 	size_t	i;
 
 	i = 0;
-	while (*start)
+	while (*start && end != NULL)
 	{
 		if (start++ == end)
 			return (i);
@@ -47,37 +54,27 @@ static size_t	ft_substrlen(char const *start, char const *end)
 	return (i);
 }
 
-static char		*ft_findchar(const char *s, int c)
-{
-	char *ptr;
-
-	ptr = ft_strchr(s, c);
-	if (ptr == NULL)
-		ptr = ft_strchr(s, '\0');
-	return (ptr);
-}
-
 char			**ft_split(char const *s, char c)
 {
 	char	**arr;
-	char	*start;
-	char	*end;
 	size_t	size;
 	size_t	i;
+	int	len;
 
-	size = ft_ncharinstr(s, c) + 2;
-	if (!(arr = (char**)malloc(sizeof(char**) * size)))
+	size = ft_nsentences(s, c) + 1;
+	if (!(arr = (char**)malloc(sizeof(char**) * size--)))
 		return (NULL);
-	arr[--size] = NULL;
 	i = 0;
-	start = (char*)s;
-	while (i < size)
-	{
-		end = ft_findchar(start, c);
-		if (!(arr[i++] = ft_substr(s, ft_substrlen(s, start),
-							ft_substrlen(start, end))))
-			return (NULL);
-		start = end + 1;
-	}
+	while (*s && i < size)
+		if (*s == c)
+			s++;
+		else
+		{
+			if ((len = ft_substrlen(s, ft_strchr(s, c))) == 0)
+				len = ft_substrlen(s, ft_strchr(s, '\0')) + 1;
+			arr[i++] = ft_substr(s, 0, len);
+			s += len + 1;
+		}
+	arr[i] = NULL;
 	return (arr);
 }
