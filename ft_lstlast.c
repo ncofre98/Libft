@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 21:49:58 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/10 21:59:21 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/27 23:00:52 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *current;
-
-	current = lst->next;
-	while (current != NULL && current->next != NULL)
-		current = current->next;
-	return (current);
+	while ((lst != NULL) & (lst->next != NULL))
+		lst = lst->next;
+	return (lst);
 }
