@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 22:19:45 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/18 09:00:16 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/27 22:49:10 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char				*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		i = 0;
 		end = start + len - 1;
-		while (start <= end)
+		while (start <= end && len > 0)
 		{
 			ptr[i] = s[start];
 			i++;
