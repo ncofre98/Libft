@@ -6,7 +6,7 @@
 #    By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/22 10:07:07 by ncofre            #+#    #+#              #
-#    Updated: 2020/12/28 20:21:53 by ncofre           ###   ########.fr        #
+#    Updated: 2020/12/29 01:16:54 by ncofre           ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -43,10 +43,6 @@ clean:
 
 fclean: clean
 		@rm -f $(NAME) libft.so libft.h.gch
-
-so:
-	$(CC) -fPIC $(FLAGS) $(SRCS)
-	gcc -shared -o libft.so $(OBJS)
 
 re: fclean all
 
