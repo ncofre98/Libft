@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 17:07:25 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/18 08:59:34 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/28 23:37:53 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,14 @@
 **unique pointer value that can later be successfully passed to free().
 */
 
-void		*ft_calloc(size_t nmemb, size_t size)
+void			*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*ptr;
-	size_t	total_size;
+	void		*ptr;
+	long int	total_size;
 
 	total_size = nmemb * size;
-	if (nmemb == 0 || size == 0)
+	if (!(ptr = malloc(total_size)))
 		return (NULL);
-	ptr = malloc(total_size);
 	ft_bzero(ptr, total_size);
 	return (ptr);
 }

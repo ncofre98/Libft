@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 00:20:22 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/18 09:17:13 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/28 22:37:24 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,16 @@
 
 void		*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	char	temp_array[n];
+	char	*tmp;
 
-	i = 0;
-	while (i < n)
+	if (!dest && !src && n)
+		return (NULL);
+	tmp = (char*)malloc(sizeof(char) * n);
+	if (tmp)
 	{
-		temp_array[i] = *(char*)(src + i);
-		i++;
+		ft_memcpy(tmp, src, n);
+		ft_memcpy(dest, tmp, n);
 	}
-	i = 0;
-	while (i < n)
-	{
-		*(char*)(dest + i) = temp_array[i];
-		i++;
-	}
+	free(tmp);
 	return (dest);
 }

@@ -6,14 +6,14 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 21:06:04 by ncofre            #+#    #+#             */
-/*   Updated: 2020/11/06 21:09:51 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/28 22:57:44 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (c - ('a' - 'A'));
+		return (c - 32);
 	else
 		return (c);
 }

@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 22:19:45 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/27 22:49:10 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/29 00:40:57 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@ char				*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	end;
 	unsigned int	i;
 
-	ptr = (char*)malloc(sizeof(char) * len + 1);
-	if (!ptr)
+	if (!(ptr = (char*)malloc(sizeof(char) * len + 1)))
 		return (NULL);
+	if (start >= ft_strlen(s))
+		ft_bzero(ptr, len + 1);
 	else
 	{
 		i = 0;
@@ -39,6 +40,6 @@ char				*ft_substr(char const *s, unsigned int start, size_t len)
 			start++;
 		}
 		ptr[i] = '\0';
-		return (ptr);
 	}
+	return (ptr);
 }
