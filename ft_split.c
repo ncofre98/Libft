@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:09:55 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/28 15:42:18 by ncofre           ###   ########.fr       */
+/*   Updated: 2020/12/28 19:46:11 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static size_t	ft_nsentences(char const *s, char const c)
 	{
 		if (*s != c)
 			count++;
-		if ((*s++ == c && count > 0) || (!*(s + 1) && count > 0))
+		if ((*s == c && count > 0) || (!*(s++ + 1) && count > 0))
 		{
 			n++;
 			count = 0;
@@ -59,7 +59,7 @@ char			**ft_split(char const *s, char c)
 	char	**arr;
 	size_t	size;
 	size_t	i;
-	int	len;
+	size_t	len;
 
 	size = ft_nsentences(s, c) + 1;
 	if (!(arr = (char**)malloc(sizeof(char**) * size--)))
@@ -71,7 +71,7 @@ char			**ft_split(char const *s, char c)
 		else
 		{
 			if ((len = ft_substrlen(s, ft_strchr(s, c))) == 0)
-				len = ft_substrlen(s, ft_strchr(s, '\0')) + 1;
+				len = ft_substrlen(s, ft_strchr(s, '\0'));
 			arr[i++] = ft_substr(s, 0, len);
 			s += len + 1;
 		}
