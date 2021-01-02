@@ -6,7 +6,7 @@
 /*   By: ncofre <ncofre@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 21:07:21 by ncofre            #+#    #+#             */
-/*   Updated: 2020/12/08 20:03:19 by ncofre           ###   ########.fr       */
+/*   Updated: 2021/01/02 01:07:06 by ncofre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (*(char*)(s + i) == c)
-			return ((void*)(s + i));
+		if (*(unsigned char*)(s + i) == (unsigned char)c)
+			return ((void*)(((unsigned char*)s) + i));
 		else
 			i++;
 	}
